@@ -1,0 +1,241 @@
+\documentclass{report}
+
+% \usepackage[active]{srcltx}
+
+\usepackage{a4}
+\usepackage[all]{xy}
+\usepackage{enumerate}
+\usepackage{xr}
+\usepackage{theorem}
+\usepackage[driverfallback=hypertex]{hyperref}
+
+\usepackage{float}
+\usepackage{bussproofs}
+
+%
+\scrollmode
+%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{stmaryrd}
+\usepackage{array}
+\usepackage{exscale}
+
+\renewcommand{\thefootnote}{\arabic{footnote})}%
+%
+\newtheorem{defi}{Definition}[section]
+\newtheorem{lem}[defi]{Lemma}
+\newtheorem{thm}[defi]{Theorem}
+\newtheorem{corol}[defi]{Corollary}
+\newtheorem{propo}[defi]{Proposition}
+\newtheorem{exerc}[defi]{Exercise}
+\newtheorem{conj}[defi]{Conjecture}
+\newtheorem{examp}[defi]{Example}
+\newtheorem{quest}[defi]{Question}
+\newtheorem{spec}[defi]{Speculation}
+%\newtheorem{claim}[defi]{Claim}
+
+\newcommand{\nc}{\newcommand}
+
+\newcommand{\DST}{\displaystyle}
+\newcommand{\TST}{\textstyle}
+\newcommand{\SST}{\scriptstyle}
+\newcommand{\SSST}{\scriptscriptstyle}
+
+\nc{\bm}{\boldmath}
+\nc{\bmm}[1]{\mbox{\bm$\DST #1$}}% Math. Fettdruck im Text- wie im math. Modus
+
+\newcommand{\mb}{{\:|\:}} % Mengenbildner; set creation
+\newcommand{\set}[1]{\{ #1 \}}
+\newcommand{\setb}[1]{\big \{ \, #1 \, \big \}}
+\newcommand{\tb}[2]{\set{#1, \dots, #2}} % Teilbereich
+
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\es}{\emptyset}
+\newcommand{\sm}{\setminus}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\vp}{\varphi}
+\newcommand{\bw}{\bigwedge}
+\newcommand{\bv}{\bigvee}
+\newcommand{\bc}{\bigcup}
+\newcommand{\bca}{\bigcap}
+\newcommand{\Lra}{\Leftrightarrow}
+\newcommand{\Lora}{\Longrightarrow}
+\newcommand{\Lla}{\Longleftarrow}
+\newcommand{\Llra}{\Longleftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lora}{\longrightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\da}{\downarrow}
+\newcommand{\ub}{\underbrace}
+\newcommand{\ob}{\overbrace}
+\newcommand{\sst}{\subset}
+\newcommand{\sse}{\subseteq}
+\newcommand{\spt}{\supset}
+\newcommand{\spe}{\supseteq}
+\newcommand{\fa}{\forall}
+\newcommand{\ex}{\exists}
+\newcommand{\mr}{\mathrm}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\vtr}{\vartriangleright}
+\newcommand{\trd}{\triangledown}
+\newcommand{\DMO}{\DeclareMathOperator}
+%
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\NNZ}{\NN_0}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\AAM}{\mathbb{A}}
+\newcommand{\MM}{\mathbb{M}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\BB}{\mathbb{B}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\WW}{\mathbb{W}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\UU}{\mathbb{U}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\SSM}{\mathbb{S}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\TT}{\mathbb{T}}
+
+\newcommand{\Va}{\mc{V\hspace{-0.1em}A}}
+\newcommand{\Lit}{\mc{LIT}}
+\newcommand{\Cl}{\mc{CL}}
+\newcommand{\Cls}{\mc{CLS}}
+
+\DeclareMathOperator{\lit}{lit}
+\DeclareMathOperator{\var}{var}
+
+\DeclareMathOperator{\res}{\diamond} % die (partielle) Resolutionsoperation
+
+% Schubfachformeln (pigeonhole formulas):
+\newcommand{\php}{\mathrm{PHP}}
+\newcommand{\fphp}{\mathrm{FPHP}} % mit AMO-Klauseln
+\newcommand{\ophp}{\mathrm{OPHP}} % jedes Fach verwendet; every hole is used
+\newcommand{\ofphp}{\mathrm{BPHP}} % bijektive Form
+\newcommand{\ephp}{\mathrm{EPHP}} % PHP with extended-resolution clauses from Cook1976short
+
+
+
+\begin{document}
+
+\title{XXX}
+
+\author{
+  XXX\\
+  \href{http://www.swan.ac.uk/compsci/}{Computer Science Department}, \href{http://www.swan.ac.uk/science/}{College of Science}\\
+  \href{http://www.swan.ac.uk/}{Swansea University, UK}\\
+  {XXX url}
+}
+
+\maketitle
+
+\begin{abstract}
+  
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introduction}
+\label{cha:Introduction}
+
+XXX
+
+\section{History}
+\label{sec:History}
+
+XXX Haken in his seminal paper \cite{Haken1985Intractability} for the first time showed an exponential lower bound for \emph{full} resolution.
+
+
+
+\chapter{Preliminaries}
+\label{cha:Preliminaries}
+
+\section{Clause-sets}
+\label{clause-sets}
+
+We follow the general notations and definitions as outlined in \cite{Kullmann2007HandbuchMU}. We use $\NN = \set{1,2,\dots}$ and $\NNZ = \NN \cup \set{0}$.
+
+Let $\Va$ be the set of variables, and let $\Lit = \Va \cup \set{\ol{v} : v \in \Va}$ be the set of literals, the disjoint union of variables as positive literals and complemented variables as negative literals. The complementation operation is extended to a (fixed point) free involution on $\Lit$, that is, for all $x \in \Lit$ we have $\ol{\ol{x}} = x$. We assume $\NN \sse \Va$, with $\ol{n} = -n$ for $n \in \NN$ (whence $\ZZ \sm \set{0} \sse \Lit$).\footnote{This yields a convenient way of writing down examples, where we do not have to distinguish between different types of variables, and thus can just use natural numbers as variables. Furthermore the set of variables is infinite, and thus is never exhausted by a clause-set.}
+
+We use $\ol{L} := \set{\ol{x} : x \in L}$ to complement a set $L$ of literals. A clause is a finite subset $C \subset \Lit$ which is complement-free, i.e., $C \cap \ol{C} = \es$; the set of all clauses is denoted by $\Cl$. A clause-set is a finite set of clauses, the set of all clause-sets is $\Cls$. By $\var(x) \in \Va$ we denote the underlying variable of a literal $x \in \Lit$, and we extend this via $\var(C) := \set{\var(x) : x \in C} \subset \Va$ for clauses $C$, and via $\var(F) := \bc_{C \in F} \var(C)$ for clause-sets $F$. The ``possible'' literals for a clause-set $F$ are denoted by $\lit(F) := \var(F) \cup \ol{\var(F)}$, while for the actually occurring literals we just use ordinary union $\bc F \subset \Lit$.
+
+
+\section{Resolution}
+\label{sec:Resolution}
+
+Two clauses $C, D \in \Cl$ are resolvable iff they clash in exactly one literal $x$, that is, $C \cap \ol{D} = \set{x}$, in which case their resolvent is $\bmm{C \res D} := (C \cup D) \sm \set{x,\ol{x}}$ (with resolution literal $x$). A resolution tree is a full binary tree formed by the resolution operation. We write \bmm{T : F \vdash C} if $T$ is a resolution tree with axioms (the clauses at the leaves) all in $F$ and with derived clause (at the root) $C$.
+
+
+\section{Pigeonhole principles}
+\label{sec:php}
+
+The \textbf{pigeon-hole principle} states that there is an injective map from $\tb1m$ to $\tb1k$ for $m,k \in \NNZ$ iff $m \le k$. So when putting $m$ pigeons into $k$ holes, if $m > k$ then at least one hole must contain two or more pigeons. We formalise the pigeon-hole principle as a clause-set \bmm{\php^m_k}, which is unsatisfiable iff $m > k$.
+\begin{defi}\label{def:php}
+  We use variables $p_{i,j} \in \Va$ for $i, j \in \NN$ such that $(i,j) \not= (i',j') \Ra p_{i,j} \not= p_{i',j'}$. For $m, k \in \NNZ$ let
+  \begin{eqnarray*}
+    F^{\ge 1} & := & \setb{\set{p_{i,j} \mb j \in \tb1k}}_{i \in \tb1m }\\
+     F_{\ge 1} & := & \setb{\set{p_{i,j} \mb i \in \tb 1m}}_{j \in \tb 1k }\\
+    F^{\le 1} & := & \setb{\set{\ol{p_{i,j_1}},\ol{p_{i,j_2}}} \mb i \in \tb 1m, j_1, j_2 \in \tb 1k, j_1 \not= j_2}\\
+    F_{\le 1} & := & \setb{ \set{\ol{p_{i_1,j}},\ol{p_{i_2,j}}} \mb i_1,i_2 \in \tb1m, i_1 \not= i_2, j \in \tb1k }.
+  \end{eqnarray*}
+  The \textbf{pigeon-hole clause-set} $\bmm{\php^m_k} \in \Cls$ for $m,k \in \NNZ$ uses variables $p_{i,j}$ for $i \in \tb 1m$, $j \in \tb 1k$, and is defined, together with the \textbf{functional}, \textbf{onto}, and \textbf{bijective} form, as
+  \begin{eqnarray*}
+    \bmm{\php^m_k} & := & F^{\ge 1} \cup F_{\le 1} \in \Cls\\
+    \bmm{\fphp^m_k} & := & \php^m_k \cup F^{\le 1} \in \Cls\\
+    \bmm{\ophp^m_k} & := & \php^m_k \cup F_{\ge 1} \in \Cls\\
+    \bmm{\ofphp^m_k} & := & \php^m_k \cup F^{\le 1} \cup F_{\ge 1} \in \Cls.
+  \end{eqnarray*}
+\end{defi}
+
+\begin{examp}\label{exp:PHPdef}
+  PHP-clause-sets for small parameters:
+  \begin{enumerate}
+  \item $\php^0_0 = \top$, $\fphp^0_0 = \top$, $\ophp^0_0 = \top$, $\ofphp^0_0 = \top$.
+  \item $\php^1_0 = \set{\bot}$, $\fphp^1_0 = \set{\bot}$, $\ophp^1_0 = \set{\bot}$, $\ofphp^1_0 = \set{\bot}$.
+  \item $\var(\php^2_1) = \set{p_{1,1},p_{2,1}}$, $\php^2_1 = \set{\set{p_{1,1}}, \set{p_{2,1}}, \set{\ol{p_{1,1}},\ol{p_{2,1}}}}$, $\fphp^2_1 = \php^2_1$, $\ophp^2_1 = \php^2_1 \cup \set{\set{p_{1,1},p_{2,1}}}$, $\ofphp^2_1 = \ophp^2_1$.
+  \item $\var(\php^3_2) = \set{p_{1,1},p_{2,1}, XXX}$:
+    \begin{eqnarray*}
+      \php^3_2 & = &\\
+      \fphp^3_2 & = &\\
+      \ophp^3_2 & = &\\
+      \ofphp^3_2 & = &.
+    \end{eqnarray*}
+  \end{enumerate}
+\end{examp}
+
+
+
+
+\chapter{Literature review}
+\label{cha:Literature}
+
+\section{Haken: The Intractability of Resolution}
+\label{sec:Haken1985Intractability}
+
+XXX \cite{Haken1985Intractability}
+
+\bibliographystyle{plain}
+
+\bibliography{Literature}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
