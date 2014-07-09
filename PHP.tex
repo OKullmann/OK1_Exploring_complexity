@@ -132,7 +132,7 @@
 
 \begin{document}
 
-\title{Pigeonhole Principle}
+\title{The resolution complexity of Pigeonhole formulas}
 
 \author{
   Jonathan Richards\\
@@ -144,7 +144,7 @@
 \maketitle
 
 \begin{abstract}
-Summer intern-ship attempting to prove the complexity of Pigeonhole Principle using resolution. 
+  We study the \emph{precise} complexity of Pigeonhole formulas $\php^{n+1}_n$ for tree- as well as dag-resolution.
 \end{abstract}
 
 \tableofcontents
@@ -211,9 +211,9 @@ The \textbf{pigeon-hole principle} states that there is an injective map from $\
     \begin{eqnarray*}
       \php^3_2 & = & \set{\set{p_{1,1},p_{1,2}},\set{p_{2,1},p_{2,2}},\set{p_{3,1},p_{3,2}},
       \\
-      \set{\ol{p_{1,1}},\ol{p_{2,1}}},\set{\ol{p_{1,1}},\ol{p_{3,1}}},\set{\ol{p_{2,1}},\ol{p_{3,1}}},
+      && \set{\ol{p_{1,1}},\ol{p_{2,1}}},\set{\ol{p_{1,1}},\ol{p_{3,1}}},\set{\ol{p_{2,1}},\ol{p_{3,1}}},
       \\
-      \set{\ol{p_{1,2}},\ol{p_{2,2}}},\set{\ol{p_{1,2}},\ol{p_{3,2}}},\set{\ol{p_{2,2}},\ol{p_{3,2}}} }\\
+      && \set{\ol{p_{1,2}},\ol{p_{2,2}}},\set{\ol{p_{1,2}},\ol{p_{3,2}}},\set{\ol{p_{2,2}},\ol{p_{3,2}}} }\\
       \fphp^3_2 & = &\\
       \ophp^3_2 & = &\\
       \ofphp^3_2 & = &.
@@ -221,21 +221,22 @@ The \textbf{pigeon-hole principle} states that there is an injective map from $\
   \end{enumerate}
 \end{examp}
 
-Assume n = k, for \bmm{\php^m_k}
+\begin{figure}[h]
+  \centering
+  \begin{tabular}{c|c|c|c|c}
+    \hline
+    n & $n$ &  $c$ & min \# nodes & min \# leaves \\ \hline
+    0 & $0$ & $1$ & $1$ & $1$\\ \hline
+    1 & $?$ & $?$ & $5$ & $3$    \\ \hline
+    2 &                 &        \\ \hline
+    3 &                 &        \\ \hline
+    4 &                 &        \\ \hline
+    \end{tabular}
+  \caption{Basic meaurements for $\php^{n+1}_n$, $n \in \NNZ$}
+  \label{fig:basicmeasurement}
+\end{figure}
 
-\begin{table}[h]
-\begin{tabular}{|l|l|l|}
-\hline
-n & Tree complexity & Leaves \\ \hline
-0 &        1        &   1    \\ \hline
-1 &        5        &   3    \\ \hline
-2 &                 &        \\ \hline
-3 &                 &        \\ \hline
-4 &                 &        \\ \hline
-\end{tabular}
-\end{table}
-
-For \bmm{\php^m_k}, the number of long clauses is equal to m, the number of short clauses is equal to $\frac {n(n+1)n}{2}$, 2 nested loop selecting 2 different cells in the same column with selection order being irreverent. 
+For \bmm{\php^m_k}, $m, k \in \NNZ$, the number of long clauses is $c(F^{\ge 1}) = m$, the number of short clauses is $c(F_{\le 1}) = \frac {n(n+1)n}{2}$, since we have a double-nested loop selecting two different cells in the same column with selection order being irreverent. 
 
 
 \section{Matrix representation of the Pigeonhole principles}
@@ -245,7 +246,24 @@ Some further notation used in this paper include clause sets represented as a Ma
 For \bmm{\php^m_k} the number of rows would be m, the number of pigeons.
 Columns would be n, the number of holes, such that: $\set{p_{1,1},p_{1,2}}.$ from $\php^3_2$,  pigeon is in hole 1 or pigeon is in hole 2, from $\php^3_2$ would be:
 
- 
+\begin{displaymath}
+  \set{p_{1,1},p_{1,2}} \leadsto
+  \begin{pmatrix}
+    +1 & +1\\
+    0 & 0 &\\
+    0 & 0
+  \end{pmatrix} \leadsto
+  \begin{array}{cc}
+    + & +\\
+    \\
+    \\
+  \end{array}
+  \begin{pmatrix}
+    + & +&\\
+     &  &\\
+     &  &
+  \end{pmatrix} ???
+\end{displaymath}
 \[ \set{p_{1,1},p_{1,2}} = \left| \begin{array}{ccc}
 +1 & +1 \\
  0 & 0 \\
