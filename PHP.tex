@@ -36,6 +36,8 @@
 \newtheorem{quest}[defi]{Question}
 \newtheorem{spec}[defi]{Speculation}
 %\newtheorem{claim}[defi]{Claim}
+\newenvironment{prf}{\noindent\textbf{Proof:}\;}{\par\noindent\ignorespacesafterend}
+\newcommand{\Qed}{\hfill $\square$}
 
 \newcommand{\nc}{\newcommand}
 
@@ -164,6 +166,8 @@
   \item Is this really the right place?
   \item The definitions for ``resolution complexity'' is missing!
   \end{enumerate}
+\item Complete Lemma \ref{lem:basicmeasurements}.
+\item Complete Lemma \ref{lem:basicmeasurements2}.
 \end{enumerate}
 
 
@@ -210,7 +214,7 @@ The \textbf{pigeon-hole principle} states that there is an injective map from $\
     F^{\ge 1} & := & \setb{\set{p_{i,j} \mb j \in \tb1k}}_{i \in \tb1m }\\
      F_{\ge 1} & := & \setb{\set{p_{i,j} \mb i \in \tb 1m}}_{j \in \tb 1k }\\
     F^{\le 1} & := & \setb{\set{\ol{p_{i,j_1}},\ol{p_{i,j_2}}} \mb i \in \tb 1m, j_1, j_2 \in \tb 1k, j_1 < j_2}\\
-    F_{\le 1} & := & \setb{ \set{\ol{p_{i_1,j}},\ol{p_{i_2,j}}} \mb i_1,i_2 \in \tb1m, i_1 \not= i_2, j \in \tb1k }.
+    F_{\le 1} & := & \setb{ \set{\ol{p_{i_1,j}},\ol{p_{i_2,j}}} \mb i_1,i_2 \in \tb1m, i_1 < i_2, j \in \tb1k }.
   \end{eqnarray*}
   The \textbf{pigeon-hole clause-set} $\bmm{\php^m_k} \in \Cls$ for $m,k \in \NNZ$ uses variables $p_{i,j}$ for $i \in \tb 1m$, $j \in \tb 1k$, and is defined, together with the \textbf{functional}, \textbf{onto}, and \textbf{bijective} form, as
   \begin{eqnarray*}
@@ -257,7 +261,30 @@ The \textbf{pigeon-hole principle} states that there is an injective map from $\
   \label{fig:basicmeasurement}
 \end{figure}
 
-For \bmm{\php^m_k}, $m, k \in \NNZ$, the number of long clauses is $c(F^{\ge 1}) = m$, the number of short clauses is $c(F_{\le 1}) = \frac {n(n+1)n}{2}$, since we have a double-nested loop selecting two different cells in the same column with selection order being irreverent.
+\begin{lem}\label{lem:basicmeasurements}
+  Consider $m, k \in \NNZ$.
+  \begin{enumerate}
+  \item $c(F^{\ge 1}) = m$ (the ``long clauses'').
+  \item $c(F_{\le 1}) = \frac {n(n+1)n}{2}$ (the `` short clauses'').
+  \item
+  \item 
+  \end{enumerate}
+\end{lem}
+\begin{prf}
+XXX since we have a double-nested loop selecting two different cells in the same column with selection order being irreverent. \Qed
+\end{prf}
+
+\begin{lem}\label{lem:basicmeasurements2}
+  Consider $m, k \in \NNZ$.
+  \begin{enumerate}
+  \item $n(\php^m_k) = n(\fphp^m_k) XXX = XXX$
+  \item $c(\php^m_k) = XXX$
+  \item
+  \item
+  \item 
+  \end{enumerate}
+\end{lem}
+
 
 
 \section{Matrix representation of the Pigeonhole principles}
