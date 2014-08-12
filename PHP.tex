@@ -149,6 +149,18 @@
 
 \tableofcontents
 
+\setcounter{chapter}{-1}
+\chapter{Work plan}
+\label{cha:workplan}
+
+\section{Todos}
+\label{sec:Todos}
+
+
+
+
+
+
 \chapter{Introduction}
 \label{cha:Introduction}
 
@@ -189,7 +201,7 @@ The \textbf{pigeon-hole principle} states that there is an injective map from $\
   \begin{eqnarray*}
     F^{\ge 1} & := & \setb{\set{p_{i,j} \mb j \in \tb1k}}_{i \in \tb1m }\\
      F_{\ge 1} & := & \setb{\set{p_{i,j} \mb i \in \tb 1m}}_{j \in \tb 1k }\\
-    F^{\le 1} & := & \setb{\set{\ol{p_{i,j_1}},\ol{p_{i,j_2}}} \mb i \in \tb 1m, j_1, j_2 \in \tb 1k, j_1 \not= j_2}\\
+    F^{\le 1} & := & \setb{\set{\ol{p_{i,j_1}},\ol{p_{i,j_2}}} \mb i \in \tb 1m, j_1, j_2 \in \tb 1k, j_1 < j_2}\\
     F_{\le 1} & := & \setb{ \set{\ol{p_{i_1,j}},\ol{p_{i_2,j}}} \mb i_1,i_2 \in \tb1m, i_1 \not= i_2, j \in \tb1k }.
   \end{eqnarray*}
   The \textbf{pigeon-hole clause-set} $\bmm{\php^m_k} \in \Cls$ for $m,k \in \NNZ$ uses variables $p_{i,j}$ for $i \in \tb 1m$, $j \in \tb 1k$, and is defined, together with the \textbf{functional}, \textbf{onto}, and \textbf{bijective} form, as
@@ -214,7 +226,8 @@ The \textbf{pigeon-hole principle} states that there is an injective map from $\
       && \set{\ol{p_{1,1}},\ol{p_{2,1}}},\set{\ol{p_{1,1}},\ol{p_{3,1}}},\set{\ol{p_{2,1}},\ol{p_{3,1}}},
       \\
       && \set{\ol{p_{1,2}},\ol{p_{2,2}}},\set{\ol{p_{1,2}},\ol{p_{3,2}}},\set{\ol{p_{2,2}},\ol{p_{3,2}}} }\\
-      \fphp^3_2 & = &\\
+    \fphp^3_2 & = & \php^3_2 \cup \setb{ \set{\ol{p_{1,1}},\ol{p_{1,2}}},\set{\ol{p_{2,1}},\ol{p_{2,2}}},\set{\ol{p_{3,1}},\ol{p_{3,2}}} }
+\\
       \ophp^3_2 & = &\\
       \ofphp^3_2 & = &.
     \end{eqnarray*}
